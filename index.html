@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taste Heaven | Fresh Tiffins, Happy You</title>
+<meta name="description" content="Taste Heaven serves fresh, hygienic and affordable South Indian tiffins, breakfast combos and snacks. Good Food, Good Mood!">
+
+<style>
+:root {
+    --green: #075b3c;
+    --dark-green: #03452f;
+    --light-green: #eaf5e9;
+    --orange: #f28c16;
+    --cream: #fffaf0;
+    --white: #ffffff;
+    --text: #183d30;
+    --shadow: 0 8px 25px rgba(0, 60, 35, 0.10);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+header {
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 14px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--green);
+    line-height: 1.1;
+}
+
+.logo span,
+footer .footer-logo span {
+    color: var(--orange);
+}
+
+.logo small {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--orange);
+}
+
+.nav-cta {
+    background: var(--green);
+    color: white !important;
+    padding: 10px 18px;
+    border-radius: 25px;
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: none;
+    color: var(--green);
+    font-size: 27px;
+}
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 65px 5%;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 7px 15px;
+    background: #e0f0dc;
+    color: var(--green);
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 5vw, 66px);
+    line-height: 1.1;
+    color: var(--green);
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: var(--orange);
+}
+
+.hero p {
+    color: #566b5e;
+    font-size: 17px;
+    margin-bottom: 28px;
+    max-width: 520px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    padding: 13px 24px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--green);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--dark-green);
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--green);
+    border: 1px solid #c9dfcf;
+}
+
+.btn-secondary:hover {
+    background: var(--light-green);
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 35px;
+    box-shadow: var(--shadow);
+}
+
+.floating-card {
+    position: absolute;
+    bottom: 20px;
+    left: -20px;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    font-weight: bold;
+    color: var(--green);
+}
+
+.floating-card span {
+    display: block;
+    font-size: 12px;
+    color: #777;
+    font-weight: normal;
+}
+
+.highlights {
+    background: var(--green);
+    color: white;
+    padding: 27px 5%;
+}
+
+.highlight-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.highlight-item {
+    padding: 8px;
+}
+
+.highlight-item .icon {
+    font-size: 30px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.highlight-item h3 {
+    font-size: 15px;
+}
+
+.highlight-item p {
+    font-size: 12px;
+    color: #d7ebdd;
+}
+
+section {
+    scroll-margin-top: 85px;
+}
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 75px 5%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.section-heading .eyebrow {
+    color: var(--orange);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    color: var(--green);
+    font-size: clamp(29px, 4vw, 42px);
+    margin: 8px 0;
+}
+
+.section-heading p {
+    color: #68776d;
+}
+
+.menu-section {
+    background: #f2f7ed;
+}
+
+.menu-filters {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.filter-btn {
+    border: 1px solid #c9ddcc;
+    background: white;
+    color: var(--green);
+    padding: 10px 19px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--green);
+    color: white;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.menu-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-6px);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.menu-card-content {
+    padding: 20px;
+}
+
+.menu-card h3 {
+    color: var(--green);
+    font-size: 21px;
+    margin-bottom: 7px;
+}
+
+.menu-card p {
+    font-size: 13px;
+    color: #748075;
+    margin-bottom: 16px;
+}
+
+.food-list {
+    list-style: none;
+}
+
+.food-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px dashed #dbe5dc;
+    padding: 9px 0;
+    font-size: 14px;
+}
+
+.food-list li:last-child {
+    border-bottom: none;
+}
+
+.price {
+    font-weight: bold;
+    color: var(--orange);
+    white-space: nowrap;
+}
+
+.menu-note {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 13px;
+    color: #657468;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.about-content h2 {
+    color: var(--green);
+    font-size: 38px;
+    line-height: 1.2;
+    margin: 10px 0 20px;
+}
+
+.about-content p {
+    color: #657468;
+    margin-bottom: 20px;
+}
+
+.feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 18px 0;
+}
+
+.feature-icon {
+    background: #e5f2e3;
+    color: var(--green);
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 21px;
+    flex-shrink: 0;
+}
+
+.feature h3 {
+    color: var(--green);
+    font-size: 16px;
+}
+
+.feature p {
+    margin: 3px 0 0;
+    font-size: 13px;
+}
+
+.happy-section {
+    background: #fff0bf;
+    padding: 60px 5%;
+}
+
+.happy-content {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.happy-content img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.happy-content h2 {
+    color: var(--green);
+    font-size: 38px;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+.happy-content p {
+    color: #645b40;
+    margin: 15px 0 25px;
+}
+
+.business-section {
+    background: white;
+}
+
+.business-image {
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.business-image img {
+    width: 100%;
+    height: auto;
+}
+
+.business-note {
+    text-align: center;
+    font-size: 13px;
+    color: #68776d;
+    margin-top: 18px;
+}
+
+.contact-section {
+    background: var(--light-green);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.contact-card {
+    text-align: center;
+    background: white;
+    padding: 28px 18px;
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+}
+
+.contact-card .icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.contact-card h3 {
+    color: var(--green);
+    margin-bottom: 7px;
+}
+
+.contact-card p {
+    color: #68776d;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.contact-cta {
+    text-align: center;
+    margin-top: 35px;
+}
+
+footer {
+    background: #043c2a;
+    color: white;
+    text-align: center;
+    padding: 35px 5%;
+}
+
+footer .footer-logo {
+    font-size: 28px;
+    font-weight: 900;
+}
+
+footer p {
+    font-size: 13px;
+    color: #d4e5d8;
+    margin-top: 8px;
+}
+
+.back-top {
+    display: inline-block;
+    margin-top: 15px;
+    color: #ffbd63;
+}
+
+@media (max-width: 850px) {
+    .nav-links {
+        gap: 14px;
+    }
+
+    .hero {
+        gap: 25px;
+    }
+
+    .hero-image img {
+        height: 330px;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid,
+    .happy-content {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 650px) {
+    nav {
+        padding: 13px 5%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px 5%;
+        box-shadow: var(--shadow);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 5px;
+    }
+
+    .nav-cta {
+        text-align: center;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 45px;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .hero-image img {
+        height: 300px;
+        border-radius: 24px;
+    }
+
+    .floating-card {
+        left: 10px;
+        bottom: 10px;
+    }
+
+    .highlight-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .section {
+        padding: 55px 5%;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-card img {
+        height: 230px;
+    }
+
+    .about-grid,
+    .happy-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content h2,
+    .happy-content h2 {
+        font-size: 32px;
+    }
+
+    .happy-content img {
+        max-height: 280px;
+        order: -1;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .business-image {
+        border-radius: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="#home" class="logo">
+            Taste <span>Heaven</span>
+            <small>FRESHNESS • TASTE • HAPPINESS</small>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="navLinks">
+            ☰
+        </button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#menu">Our Menu</a>
+            <a href="#about">About Us</a>
+            <a href="#business">Our Business</a>
+            <a href="#contact" class="nav-cta">Visit Us</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="tag">🌿 FRESH FOOD • HAPPY LIFE</span>
+
+            <h1>
+                Good Food,<br>
+                <span>Great Mood!</span>
+            </h1>
+
+            <p>
+                Welcome to Taste Heaven! Enjoy delicious South Indian
+                tiffins, tasty breakfast combos and crispy snacks.
+                Freshly prepared, hygienic and affordable for everyone.
+            </p>
+
+            <div class="buttons">
+                <a href="#menu" class="btn btn-primary">
+                    Explore Our Menu →
+                </a>
+
+                <a href="#about" class="btn btn-secondary">
+                    Discover Our Story
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="1000196999.png"
+                alt="Taste Heaven restaurant menu featuring South Indian food">
+
+            <div class="floating-card">
+                🌿 Fresh & Hygienic
+                <span>Made with care, served with love</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="highlights">
+        <div class="highlight-grid">
+            <div class="highlight-item">
+                <span class="icon">🥗</span>
+                <h3>Fresh Food</h3>
+                <p>Prepared fresh every day</p>
+            </div>
+
+            <div class="highlight-item">
+                <span class="icon">🛡️</span>
+                <h3>Hygienic Kitchen</h3>
+                <p>Cleanliness matters</p>
+            </div>
+
+            <div class="highlight-item">
+                <span class="icon">🍲</span>
+                <h3>Nutritious Meals</h3>
+                <p>Delicious everyday choices</p>
+            </div>
+
+            <div class="highlight-item">
+                <span class="icon">💚</span>
+                <h3>Affordable Prices</h3>
+                <p>Good food for your budget</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+        <div class="section">
+            <div class="section-heading">
+                <span class="eyebrow">Made with Love</span>
+                <h2>Explore Our Menu 🍽️</h2>
+                <p>Delicious flavours, pocket-friendly prices.</p>
+            </div>
+
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all">
+                    All Items
+                </button>
+
+                <button class="filter-btn" data-filter="tiffins">
+                    Tiffins
+                </button>
+
+                <button class="filter-btn" data-filter="combos">
+                    Breakfast Combos
+                </button>
+
+                <button class="filter-btn" data-filter="snacks">
+                    Snacks
+                </button>
+            </div>
+
+            <div class="menu-grid">
+
+                <article class="menu-card" data-category="tiffins">
+                    <img src="1000196999.png" alt="South Indian tiffin meal">
+
+                    <div class="menu-card-content">
+                        <h3>🥣 South Indian Tiffins</h3>
+                        <p>Your favourite traditional breakfast.</p>
+
+                        <ul class="food-list">
+                            <li>
+                                <span>Idly (2 pcs)</span>
+                                <span class="price">₹30</span>
+                            </li>
+                            <li>
+                                <span>Dosa (2 pcs)</span>
+                                <span class="price">₹40</span>
+                            </li>
+                            <li>
+                                <span>Pongal</span>
+                                <span class="price">₹35</span>
+                            </li>
+                            <li>
+                                <span>Upma</span>
+                                <span class="price">₹30</span>
+                            </li>
+                            <li>
+                                <span>Pesarattu</span>
+                                <span class="price">₹40</span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="combos">
+                    <img src="1000196999.png" alt="Dosa and vada breakfast combo">
+
+                    <div class="menu-card-content">
+                        <h3>🍳 Breakfast Combos</h3>
+                        <p>A tasty start to your day.</p>
+
+                        <ul class="food-list">
+                            <li>
+                                <span>Idly + Vada</span>
+                                <span class="price">₹50</span>
+                            </li>
+                            <li>
+                                <span>Dosa + Chutney</span>
+                                <span class="price">₹60</span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="snacks">
+                    <img src="1000196999.png" alt="Crispy snacks served with sauce">
+
+                    <div class="menu-card-content">
+                        <h3>🍟 Snacks & Starters</h3>
+                        <p>Perfect snacks for your cravings.</p>
+
+                        <ul class="food-list">
+                            <li>
+                                <span>Mirchi Bajji</span>
+                                <span class="price">₹20</span>
+                            </li>
+                            <li>
+                                <span>Veg Pakoda</span>
+                                <span class="price">₹25</span>
+                            </li>
+                            <li>
+                                <span>French Fries</span>
+                                <span class="price">₹30</span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="menu-note">
+                Prices are displayed as sample menu prices.
+                Confirm your final prices before publishing.
+            </p>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="1000196999.png"
+                    alt="Taste Heaven food menu and restaurant offerings">
+            </div>
+
+            <div class="about-content">
+                <span class="tag">OUR STORY</span>
+
+                <h2>Simple Food.<br>Wonderful Memories.</h2>
+
+                <p>
+                    Taste Heaven is a tiffin hotel concept created
+                    to bring delicious, freshly prepared food to
+                    people at affordable prices.
+                </p>
+
+                <p>
+                    From traditional South Indian breakfast to
+                    crispy evening snacks, our goal is to make
+                    every visit enjoyable.
+                </p>
+
+                <div class="feature">
+                    <span class="feature-icon">🌿</span>
+                    <div>
+                        <h3>Freshly Prepared</h3>
+                        <p>Food prepared fresh for our customers.</p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <span class="feature-icon">✨</span>
+                    <div>
+                        <h3>Clean & Hygienic</h3>
+                        <p>We value a clean and welcoming food space.</p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <span class="feature-icon">💰</span>
+                    <div>
+                        <h3>Budget Friendly</h3>
+                        <p>Tasty choices at affordable prices.</p>
+                    </div>
+                </div>
+
+                <a href="#menu" class="btn btn-primary">
+                    Discover Our Food
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="happy-section">
+        <div class="happy-content">
+            <div>
+                <span class="tag">GOOD FOOD • GOOD MOOD</span>
+
+                <h2>Eat Happy.<br>Smile More! 🍌</h2>
+
+                <p>
+                    Great food brings people together.
+                    Visit Taste Heaven for delicious tiffins,
+                    cheerful moments and prices you'll love.
+                </p>
+
+                <a href="#contact" class="btn btn-primary">
+                    Find Our Hotel →
+                </a>
+            </div>
+
+            <img src="1000175160.jpg"
+                alt="Happy smiling banana character">
+        </div>
+    </section>
+
+    <section class="business-section section" id="business">
+        <div class="section-heading">
+            <span class="eyebrow">Our Business Vision</span>
+            <h2>Growing Taste Heaven 📈</h2>
+            <p>Our projected first-year financial performance.</p>
+        </div>
+
+        <div class="business-image">
+            <img src="1000208753.png"
+                alt="Taste Heaven first-year monthly profit and loss projection">
+        </div>
+
+        <p class="business-note">
+            These figures are business projections, not guaranteed
+            actual results. Review and verify all figures before
+            using them in business decisions.
+        </p>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="section">
+            <div class="section-heading">
+                <span class="eyebrow">Come Visit Us</span>
+                <h2>Your Table Is Waiting! 💚</h2>
+                <p>Fresh tiffins, tasty snacks and a warm welcome.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="icon">📍</div>
+                    <h3>Our Location</h3>
+                    <p>Add your hotel address here.</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="icon">📞</div>
+                    <h3>Contact Us</h3>
+                    <p>Add your business phone number here.</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="icon">🕒</div>
+                    <h3>Opening Hours</h3>
+                    <p>Add your actual opening and closing times.</p>
+                </div>
+            </div>
+
+            <div class="contact-cta">
+                <p style="margin-bottom: 18px;">
+                    Visit us in person and enjoy delicious food!
+                </p>
+
+                <a href="#menu" class="btn btn-primary">
+                    View Our Menu
+                </a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-logo">
+        Taste <span>Heaven</span>
+    </div>
+
+    <p>Fresh Tiffins | Healthy Food | Happy You</p>
+
+    <p>Good Food, Good Mood. Made with love! 💚</p>
+
+    <p>
+        &copy; <span id="year"></span> Taste Heaven.
+        All rights reserved.
+    </p>
+
+    <a href="#home" class="back-top">Back to Top ↑</a>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function () {
+    const isOpen = navLinks.classList.toggle("show");
+
+    menuToggle.setAttribute("aria-expanded", isOpen);
+    menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+
+    menuToggle.textContent = isOpen ? "✕" : "☰";
+});
+
+document.querySelectorAll(".nav-links a").forEach(function (link) {
+    link.addEventListener("click", function () {
+        navLinks.classList.remove("show");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuToggle.textContent = "☰";
+    });
+});
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+const menuCards = document.querySelectorAll(".menu-card");
+
+filterButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+        const selectedCategory = button.dataset.filter;
+
+        filterButtons.forEach(function (btn) {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        menuCards.forEach(function (card) {
+            const category = card.dataset.category;
+
+            if (
+                selectedCategory === "all" ||
+                selectedCategory === category
+            ) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+});
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
